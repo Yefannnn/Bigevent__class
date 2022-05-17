@@ -38,3 +38,21 @@ body {
     display: none;
 }
 
+.layui-form {
+    padding: 0 30px;
+}
+
+.layui-form-item {
+    text-align: right;
+    position: relative;
+}
+
+.layui-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.layui-input {
+    padding-left: 30px;
+}
