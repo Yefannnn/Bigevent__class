@@ -77,7 +77,6 @@ $(function () {
                 console.log(res);
                 //保存令牌
                 localStorage.setItem('token',res.token)
-                
                 //跳转后台主页
                 location.href = '../../index.html'
             }
