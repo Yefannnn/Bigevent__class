@@ -1,0 +1,27 @@
+.layui-card-header {
+    font-size: 12px;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding: 10px;
+}
+#fll {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+#AddbtnGroup {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.layui-form {
+    width: 450px;
+    font-size: 12px;
+}
+.layui-form-item {
+    margin-top: 20px;
+}
