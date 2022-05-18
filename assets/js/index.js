@@ -5,7 +5,7 @@ $(function () {
 
 let layer = layui.layer
 
-//定义获取用户的个人信息
+//定义获取用户的个人信息并渲染到页面
 function getuserInfo() {
     $.ajax({
         method: 'GET',
@@ -14,7 +14,7 @@ function getuserInfo() {
             if (res.code !== 0) {
                 return layer.msg('用户信息获取失败')
             }
-            layer.msg('用户信息获取成功')
+            // layer.msg('用户信息获取成功')
             // console.log(res);
             renderAvatar(res)
         }

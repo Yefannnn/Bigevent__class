@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#user_info_form {
+    width: 600px;
+    font-size: 12px;
+}
+#form_btn {
+    display: flex;
+    justify-content: center;
+}

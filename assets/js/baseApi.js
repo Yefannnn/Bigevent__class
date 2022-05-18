@@ -12,7 +12,7 @@ $.ajaxPrefilter(function (option) {
 
     //每次发起ajax请求的时候都去判断一下是否用户持有令牌，如果没有令牌就强制让它调回主页
     option.complete = function (res) {
-        console.log(res);
+        // console.log(res);
         if (res.responseJSON.code === 1 && res.responseJSON.message === '身份认证失败！') {
             location.href = '../../login.html'
             localStorage.removeItem('token')
