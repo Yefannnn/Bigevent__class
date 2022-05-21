@@ -5,6 +5,11 @@ $(function () {
 
 let layer = layui.layer
 
+//点击---文发布之后就清楚id值
+$('#pub_btn').on('click', function () {
+    localStorage.removeItem('id')
+})
+
 //定义获取用户的个人信息并渲染到页面
 function getuserInfo() {
     $.ajax({
@@ -32,17 +37,20 @@ function renderAvatar(res) {
         let firstname = name[0].toUpperCase()
         $('.text-avatar').html(firstname).show()
         $('.layui-nav-img').hide()
-    }else {
+    } else {
         $('.text-avatar').hide()
-        $('.layui-nav-img').attr('src',res.data.user_pic).show()
+        $('.layui-nav-img').attr('src', res.data.user_pic).show()
     }
 }
 
 //为退出添加点击事件
-$('#exits').on('click',function () {
-    layer.confirm('确定要退出吗?', {icon: 3, title:'提示'}, function(index){
+$('#exits').on('click', function () {
+    layer.confirm('确定要退出吗?', {
+        icon: 3,
+        title: '提示'
+    }, function (index) {
         location.href = '../../login.html'
         localStorage.removeItem('token')
         layer.close(index);
-      });
+    });
 })
