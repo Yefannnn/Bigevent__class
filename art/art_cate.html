@@ -50,8 +50,9 @@
       <td>{{$value.cate_alias}}</td>
       <td>
         <!-- 每次循环加两个按钮 -->
-        <button type="button" class="layui-btn layui-btn-normal layui-btn layui-btn-xs">编辑</button>
-        <button type="button" class="layui-btn layui-btn-danger layui-btn layui-btn-xs">删除</button>
+        <button type="button" class="layui-btn layui-btn-normal layui-btn layui-btn-xs" id="btn_exits"
+          data-id="{{$value.id}}">编辑</button>
+        <button type="button" class="layui-btn layui-btn-danger layui-btn layui-btn-xs" data-id="{{$value.id}}" id="delbtn">删除</button>
       </td>
     </tr>
     {{/each}}
@@ -59,7 +60,33 @@
 
   <!-- 渲染添加文章类别的弹出层 -->
   <script type="text/html" id="renderAdd">
-    <form class="layui-form" id="art_cateForm" >
+    <form class="layui-form" id="art_cateForm" lay-filter="art_cateForm">
+      <input type="hidden" name="id">
+      <div class="layui-form-item">
+        <label class="layui-form-label">分类名称</label>
+        <div class="layui-input-block">
+          <input type="text" name="cate_name" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+            class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">分类别名</label>
+        <div class="layui-input-block">
+          <input type="text" name="cate_alias" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+            class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item" id="AddbtnGroup">
+        <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm" id="reset">重置</button>
+        <button type="button" class="layui-btn layui-btn-sm" id="btn_Save">确定</button>
+      </div>
+    </form>
+  </script>
+
+  <!-- 渲染编辑文章类别的弹出层 -->
+  <!-- <script type="text/html" id="randerExit">
+    <form class="layui-form" id="art_cateForm" lay-filter="art_cateForm">
+      <input type="hidden" name="id">
       <div class="layui-form-item">
         <label class="layui-form-label">分类名称</label>
         <div class="layui-input-block">
@@ -76,10 +103,10 @@
       </div>
       <div class="layui-form-item" id="AddbtnGroup">
         <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">取消</button>
-        <button type="button" class="layui-btn layui-btn-sm" id="btn_Save">确定</button>
+        <button type="button" class="layui-btn layui-btn-sm" id="btn_editSave">确定</button>
       </div>
     </form>
-  </script>
+  </script> -->
 
 
   <!-- 导入第三方库 -->

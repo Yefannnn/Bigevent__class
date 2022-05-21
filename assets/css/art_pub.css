@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding: 20px;
+}
+
+#form_pubArt {
+    width: 900px;
+}
+
+/* 封面容器的样式 */
+.cover-box {
+    display: flex;
+  }
+  
+  /* 左侧裁剪区域的样式 */
+  .cover-left {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin-right: 20px;
+    background-color: #ccc;
+  }
+  
+  
+  /* 右侧盒子的样式 */
+  .cover-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* 预览区域的样式 */
+  .img-preview {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+.Artcate {
+    margin-top: 30px;
+}
+textarea {
+    visibility: hidden!important;
+}
